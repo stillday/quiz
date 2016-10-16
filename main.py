@@ -39,7 +39,7 @@ class MainHandler(BaseHandler):
         capital = self.request.get("capital")
         city = cities[secret]
         if capital == city.name:
-            return self.write("You have it.")
+            return self.write("That's right :)")
         else:
             return self.write("Sorry, it's wrong")
 
@@ -49,7 +49,7 @@ class City(object):
         self.country = country
         self.picture = picture
 
-cities = [City (name="Vienna", country="Austria", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png")]
+cities = [City (name="Vienna""Berlin", country="Austria""Germany", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png""http://polpix.sueddeutsche.com/bild/1.1406949.1355282590/940x528/berlin-staedtetipps-szkorrespondenten.jpg")]
 secret = random.seed(len(cities))
 
 app = webapp2.WSGIApplication([
