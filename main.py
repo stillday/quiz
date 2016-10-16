@@ -39,9 +39,11 @@ class MainHandler(BaseHandler):
         capital = self.request.get("capital")
         city = cities[secret]
         if capital == city.name:
-            return self.write("That's right :)")
+            self.write("That's right :)")
+            self.render_template("index.html")
         else:
-            return self.write("Sorry, it's wrong")
+            self.write("Sorry, it's wrong")
+            self.render_template("index.html")
 
 class City(object):
     def __init__(self, name, country, picture):
@@ -49,8 +51,8 @@ class City(object):
         self.country = country
         self.picture = picture
 
-cities = [City (name="Vienna""Berlin", country="Austria""Germany", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png""http://polpix.sueddeutsche.com/bild/1.1406949.1355282590/940x528/berlin-staedtetipps-szkorrespondenten.jpg")]
-secret = random.seed(len(cities))
+cities = [City (name="Vienna", country="Austria", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png")]
+secret = random.randint(0, len(cities) - 1)
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
