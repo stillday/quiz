@@ -27,7 +27,7 @@ class BaseHandler(webapp2.RequestHandler):
         template = jinja_env.get_template(view_filename)
         return self.response.out.write(template.render(params))
 
-secret = random.randint(0,100)
+
 
 class MainHandler(BaseHandler):
 
@@ -40,7 +40,6 @@ class MainHandler(BaseHandler):
         city = cities[secret]
         if capital == city.name:
             return self.write("You have it.")
-
         else:
             return self.write("Sorry, it's wrong")
 
@@ -50,7 +49,8 @@ class City(object):
         self.country = country
         self.picture = picture
 
-cities = [City(name="Vienna""Berlin", country="Austria""Germany", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png""http://polpix.sueddeutsche.com/bild/1.1406949.1355282590/560x315/berlin-staedtetipps-szkorrespondenten.jpg")]
+cities = [City (name="Vienna", country="Austria", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png")]
+secret = random.seed(len(cities))
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
