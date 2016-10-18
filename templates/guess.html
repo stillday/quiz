@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess list</title>
+</head>
+<body>
+    <h1>List of all Guess</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>ID</th>
+                <th>Expected</th>
+                <th>Actual</th>
+            </tr>
+        </thead>
+        <tbody>
+             {% for guess in guesses %}
+
+                 <tr>
+                 <td>{{guess.created}}</td>
+                 <td><a href="/guesses/{{guess.key.id()}}">{{guess.key.id()}}</a></td>
+                 <td>{{guess.expected}}</td>
+                 <td>{{guess.actual}}</td>
+                 </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
