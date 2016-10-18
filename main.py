@@ -64,8 +64,21 @@ class City(object):
         self.country = country
         self.picture = picture
 
-cities = [City (name="Vienna", country="Austria", picture="http://www.mpnpokertour.com/wp-content/uploads/2015/08/Slider-Vienna.png"),
-        City (name="Berlin", country="Germany", picture="http://polpix.sueddeutsche.com/bild/1.1406949.1355282590/940x528/berlin-staedtetipps-szkorrespondenten.jpg")
+cities = [City (name="Vienna", country="Austria", picture="https://pixabay.com/static/uploads/photo/2016/04/15/22/08/town-hall-1332069_960_720.jpg"),
+        City (name="Berlin", country="Germany", picture="hhttps://pixabay.com/static/uploads/photo/2015/10/15/09/03/berlin-989111_960_720.jpg"),
+        City (name="Washington", country="USA", picture="https://pixabay.com/static/uploads/photo/2016/08/28/18/48/jefferson-memorial-1626580_960_720.jpg"),
+        City (name="Sydney", country="Australia", picture="https://pixabay.com/static/uploads/photo/2014/06/06/09/36/sydney-363244_960_720.jpg"),
+        City (name="London", country="UK", picture="https://pixabay.com/static/uploads/photo/2014/09/11/18/23/london-441853_960_720.jpg"),
+        City (name="Cardiff", country="UK", picture="https://pixabay.com/static/uploads/photo/2013/03/02/01/51/mermaid-quay-89121_960_720.jpg"),
+        City (name="Amsterdam", country="Netherlands", picture="https://pixabay.com/static/uploads/photo/2016/07/19/00/53/amsterdam-1527295_960_720.jpg"),
+        City (name="Brussels", country="Belgium", picture="https://pixabay.com/static/uploads/photo/2016/01/13/17/02/belgium-1138448_960_720.jpg"),
+        City (name="Den Haag", country="Netherlands", picture="https://pixabay.com/static/uploads/photo/2015/10/17/21/38/the-hague-993433_960_720.jpg"),
+        City (name="Cologne", country="Germany", picture="https://pixabay.com/static/uploads/photo/2015/12/05/19/49/cologne-1078671_960_720.jpg"),
+        City (name="Paris", country="France", picture="https://pixabay.com/static/uploads/photo/2013/04/11/19/46/louvre-102840_960_720.jpg"),
+        City (name="Hamburg", country="Germany", picture="https://pixabay.com/static/uploads/photo/2014/07/09/22/24/harbour-city-388658_960_720.jpg"),
+        City (name="Zürich", country="Switzerland", picture="https://pixabay.com/static/uploads/photo/2014/10/26/19/02/zurich-504252_960_720.jpg"),
+        City (name="Copenhagen", country="Denmark", picture="https://pixabay.com/static/uploads/photo/2015/07/24/12/26/copenhagen-858271_960_720.jpg"),
+        City (name="St Petersburg", country="Russia", picture="https://pixabay.com/static/uploads/photo/2015/11/08/21/54/st-petersburg-russia-1034319_960_720.jpg"),
           ]
 secret = random.randint(0, len(cities) - 1)
 
